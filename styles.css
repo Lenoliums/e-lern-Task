@@ -1,7 +1,5 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html{
+    overflow-x: hidden;
 }
 body{min-height: 100vh;}
 
@@ -32,6 +30,9 @@ header::before, footer::before{
     font-weight: 400;
     font-style: normal;
     line-height: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
 }
 nav{
@@ -117,6 +118,7 @@ section{
 }
 h5{
     font-size: 24px;
+    margin-bottom: 4%;
     
 }
 .description{
@@ -163,6 +165,7 @@ h5{
 h6{
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 2%;
 }
 .headTextColor{
     color: black;
@@ -188,15 +191,14 @@ h6{
     text-transform: none;
     color: #595757;
     margin-bottom: 10%;
-    list-style-position: inside 
+    list-style-position: inside;
 }
-#planArticle{
+.flex_between{
     display: flex;
     justify-content: space-between;
 }
 #courseDescription h5{
     text-transform: none;
-    margin-bottom: 4%;
     font-weight: 500;
 }
 #courseDescription div{
@@ -208,4 +210,79 @@ h6{
     font-weight: 400;
     font-variant: small-caps;
     text-transform: none;
+}
+.subTitle{
+    font-weight: 300;
+    font-variant: small-caps;
+}
+#closeAll{
+    color: #3DB1C2;
+    font-size: 18px;
+    font-weight: 500;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+.lesson, .content{
+    border: 2px solid #C4C4C4;
+    white-space: nowrap;
+    margin-top: -2px;
+}
+.lesson{
+    width: 100%;
+    align-items: baseline;
+    padding: 2% 3% 2% 6%;
+}
+.lesson h6{
+    margin: 0;
+    font-weight: 300;
+    font-variant: small-caps;
+    font-variant-numeric: lining-nums proportional-nums;
+
+}
+h4{
+    color: #595757;
+    font-size: 22px;
+    font-weight: 400;
+    font-variant: small-caps;
+}
+.arrow{
+    float: left;
+    transform: translateY(8px);
+    margin-right: 20px;
+
+}
+.name{
+    cursor: pointer;
+}
+ .content{
+    padding: 1% 3% 1% 7%;
+    align-items: baseline;
+    background-color: #E7E7E7;
+    }
+.content:hover{
+    background-color: rgba(88, 190, 205, 0.58);
+}
+.content:active{
+    background-color: rgba(88, 190, 205, 0.9);
+}
+
+ .contentIcon{
+    float: left;
+    margin-right: 20px;
+    width: 17px;
+    height: 17px;
+}
+h3{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    font-variant: small-caps;
+}
+
+[close] .contents{
+    display: none;
+}
+[close] .arrow{
+    rotate: -90deg;
+    transform: translateX(-6px);
 }
