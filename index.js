@@ -72,6 +72,7 @@ for(let lesson of Lessons){
     img.classList.add('arrow');
     let title = document.createElement('h4');
     title.textContent=lesson.name;
+    title.style.marginBottom='0'
     name.appendChild(img);
     name.appendChild(title);
     name.onclick=()=>openCloseLesson(conteiner);

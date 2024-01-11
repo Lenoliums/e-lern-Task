@@ -98,7 +98,7 @@ main{
 }
 article{
     width: 100%;
-    margin-bottom: 8%;
+    margin-bottom: 6%;
     min-width: 575px;
 }
 section{
@@ -120,6 +120,8 @@ h5{
     font-size: 24px;
     margin-bottom: 4%;
     font-weight: 500;
+    text-transform: none;
+    font-variant: small-caps;
     
 }
 .description{
@@ -134,6 +136,9 @@ h5{
     font-variant-numeric: lining-nums proportional-nums;
     text-transform: lowercase;
     margin-right: 5px;
+}
+[ alt="video"]{
+    transform: translateY(3px);
 }
 .courseButton{
     min-width: 80px;
@@ -224,6 +229,7 @@ li{
     font-weight: 500;
     font-variant: small-caps;
     cursor: pointer;
+    text-transform: none;
 }
 .lesson, .content{
     border: 2px solid #C4C4C4;
@@ -290,6 +296,69 @@ h3{
     transform: translateX(-6px);
 }
 
-#tutor>*{
-    width: 50%;
+#tutor>*, #tutorProfessor>*{
+    width: 49%;
+}
+#tutorProfessor>*{
+    min-width: 174px;
+}
+#tutorProfessor{
+    min-width: 348px;
+}
+#tutorProfessor h5{
+    color: #3CB0C1;
+    text-decoration:underline;
+    margin-bottom: 0;
+}
+#tutorProfessor p{
+    color: #595757;
+    font-size: 18px;
+    margin-bottom: 3%;
+
+}
+#tutorProfessor #subject{
+    font-size: 14px;
+    margin-bottom: 6%;
+}
+.part img{
+    float: left;
+    fill: #595757;
+    margin-right: 4%;
+}
+.part{
+    margin-top: 10%;
+}
+.part span{
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 18px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+.ques_ans{
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.ques_ans >*{
+    width: 45%;
+}
+h4{
+    font-size: 20px;
+    font-weight: 400;
+    font-variant: small-caps;
+    margin-bottom: 20px;
+}
+.answerText{
+    color: #595757;
+    font-size: 18px;
+    font-weight: 400;
+    font-variant: small-caps;
+}
+.question{
+    height: 38px;
+    transform: translateY(-20px);
+}
+.ques_ansConteiner{
+    align-items: flex-end;
+    gap: 30px;
 }
