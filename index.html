@@ -77,11 +77,11 @@
         <article id="courseDescription">
             <h5 class="headTextColor">Course description:</h5>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi enim. 
+                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi enim. 
                     Pellentesque efficitur porta ultricies. Ut condimentum laoreet malesuada.</p><br>
-                <p>Morbi ligula velit, interdum non eros eu, semper aliquet ligula. 
+                <p class="contentText">Morbi ligula velit, interdum non eros eu, semper aliquet ligula. 
                     Sed vitae ultricies nulla, ut feugiat ipsum. Nam id massa risus. Fusce ut pretium enim.</p><br>
-                <p>Duis vitae euismod quam. Phasellus eros enim, eleifend sit amet dui sed, posuere vulputate purus. 
+                <p class="contentText">Duis vitae euismod quam. Phasellus eros enim, eleifend sit amet dui sed, posuere vulputate purus. 
                     Vestibulum ullamcorper mollis nisl quis blandit. Quisque eu tincidunt urna. Mauris sit amet bibendum lectus. 
                     Integer hendrerit nunc ac porta hendrerit. Vivamus finibus quis ligula in dictum. Morbi eleifend laoreet 
                     elit, a elementum ligula accumsan id.</p>
@@ -92,12 +92,39 @@
             <h5 class="headTextColor">Course program:</h5>
             <div class="flex_between"> 
                 <h6 class="subTitle headTextColor">Total duration: 32 hours</h6>
-                <h6 id="closeAll">Close all sections</h6>
+                <h6 id="closeAll" onclick="closeLessons()">Close all sections</h6>
             </div>
 
             <div id="courseProgram">
             </div>
 
+        </article>
+
+        <article>
+            <h5 class="headTextColor">Benefits:</h5>
+            <ul>
+                <li class="contentText">Qualification certificate</li>
+                <li class="contentText">Flexible timetable</li>
+                <li class="contentText">Infinite access to all materials</li>
+                <li class="contentText">Access on different devices</li>
+            </ul>
+        </article>
+
+        <article>
+            <h5 class="headTextColor">Requirments:</h5>
+            <ul>
+                <li class="contentText">Phasellus eros enim, eleifend sit amet dui sed, posuere vulputate purus. Vestibulum.</li>
+                <li class="contentText">Ullamcorper mollis nisl quis blandit.</li>
+                <li class="contentText">Integer hendrerit nunc ac porta hendrerit.</li>
+            </ul>
+        </article>
+        <article>
+            <h5 class="headTextColor">Tutor:</h5>
+            <div class="flex_between" id="tutor">
+                <div></div>
+                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi enim. 
+                    Pellentesque efficitur porta ultricies. Ut condimentum laoreet malesuada. </p>
+            </div>
         </article>
         
 

@@ -119,6 +119,7 @@ section{
 h5{
     font-size: 24px;
     margin-bottom: 4%;
+    font-weight: 500;
     
 }
 .description{
@@ -191,6 +192,8 @@ h6{
     text-transform: none;
     color: #595757;
     margin-bottom: 10%;
+}
+li{
     list-style-position: inside;
 }
 .flex_between{
@@ -204,7 +207,7 @@ h6{
 #courseDescription div{
     width: 100%;
 }
-#courseDescription div p{
+.contentText{
     color: #595757;
     font-size: 22px;
     font-weight: 400;
@@ -249,7 +252,7 @@ h4{
     float: left;
     transform: translateY(8px);
     margin-right: 20px;
-
+    transition: all 250ms ease-out;
 }
 .name{
     cursor: pointer;
@@ -285,4 +288,8 @@ h3{
 [close] .arrow{
     rotate: -90deg;
     transform: translateX(-6px);
+}
+
+#tutor>*{
+    width: 50%;
 }

@@ -3,7 +3,7 @@ function Lesson(name, time, contents) {
 }
 
 function Content(name, type, time) {
-    return (name, type, time)
+    return {name, type, time}
 }
 
 const Lessons = [
@@ -62,18 +62,22 @@ const icons = {
 for(let lesson of Lessons){
     let conteiner = document.createElement('div');
     conteiner.setAttribute('close','');
+    conteiner.id=lesson.name
     let lessonConteiner = document.createElement('div');
     lessonConteiner.classList.add('lesson', 'flex_between');
     let name = document.createElement('div');
     name.classList.add('name');
     let img = document.createElement('img');
     img.src = "img\\arrow.svg";
+    img.classList.add('arrow');
     let title = document.createElement('h4');
     title.textContent=lesson.name;
     name.appendChild(img);
     name.appendChild(title);
+    name.onclick=()=>openCloseLesson(conteiner);
     let time=document.createElement('h6');
     time.textContent=lesson.time;
+    time.classList.add('headTextColor')
     lessonConteiner.appendChild(name);
     lessonConteiner.appendChild(time);
     let contents=document.createElement('div');
@@ -85,6 +89,7 @@ for(let lesson of Lessons){
         name.classList.add('name');
         let img = document.createElement('img');
         img.src = icons[content.type];
+        img.classList.add('contentIcon');
         let title = document.createElement('h3');
         title.textContent=content.name;
         name.appendChild(img);
@@ -95,7 +100,22 @@ for(let lesson of Lessons){
         contentConteiner.appendChild(time);
         contents.appendChild(contentConteiner);
     }
-    lessonConteiner.appendChild(contents);
     conteiner.appendChild(lessonConteiner);
+    conteiner.appendChild(contents);
     courseProgram.appendChild(conteiner);
+    if(localStorage[lesson.name]=='open')
+        conteiner.removeAttribute('close') 
+    
+}
+
+function openCloseLesson(conteiner){
+    conteiner.hasAttribute('close') ? 
+        (conteiner.removeAttribute('close'), localStorage[conteiner.id]='open') :
+        (conteiner.setAttribute('close',''), localStorage[conteiner.id]='close');
+}
+function closeLessons(){
+    for(let child of courseProgram.children){
+        child.setAttribute('close', '');
+        localStorage[child.id]='close';
+    }
 }
