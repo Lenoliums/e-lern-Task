@@ -160,23 +160,21 @@ const ratingIcon={
 
 let i=0;
 const reviewsElement = document.getElementById('reviews');
+reviewsElement.innerHTML=`<img id="left" src="img\\arrow.svg" alt="arrow">`
 for (review of Reviews){
     if(i==3){
         break;
     }
-    const reviewElement=document.createElement('div');
-    reviewElement.classList.add('review');
-    reviewElement.innerHTML=`
-                    <div class="flex_between reviewName">
-                        <div class="flex_between">
-                            <div class="profilePicture"><div>${review.name[0]}${review.surname[0]}</div></div>
-                            <span>${review.name} ${review.surname}</span>
-                        </div>
-                        <img src=${ratingIcon[review.estimation]}>
-                    </div>
-                    <p class="contentText">${review.text}</p>`;
-    reviewsElement.appendChild(reviewElement);
+    reviewsElement.innerHTML+=`<div class="review">
+        <div class="flex_between reviewName">
+            <div class="flex_between">
+                <div class="profilePicture"><div>${review.name[0]}${review.surname[0]}</div></div>
+                <span>${review.name} ${review.surname}</span>
+            </div>
+            <img src=${ratingIcon[review.estimation]}>
+        </div>
+        <p class="contentText">${review.text}</p>
+    </div>`
     i++;
-
-
 }
+reviewsElement.innerHTML+=`<img id="right" src="img\\arrow.svg" alt="arrow">`
