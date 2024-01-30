@@ -123,31 +123,31 @@ function closeLessons(){
 
 const Reviews=[
     {
-        name:"Name",
+        name:"Name1",
         surname:"Surname",
         text:"Morbi ligula velit, interdum non eros eu, semper aliquet ligula.",
         estimation: '5'
     },
     {
-        name:"Name",
+        name:"Name2",
         surname:"Surname",
         text:"Morbi ligula velit, interdum non eros eu, semper aliquet ligula.",
         estimation: '5'
     },
     {
-        name:"Name",
+        name:"Name3",
         surname:"Surname",
         text:"Morbi ligula velit, interdum non eros eu, semper aliquet ligula.",
         estimation: '5'
     },
     {
-        name:"Name",
+        name:"Name4",
         surname:"Surname",
         text:"Morbi ligula velit, interdum non eros eu, semper aliquet ligula.",
         estimation: '5'
     },
     {
-        name:"Name",
+        name:"Name5",
         surname:"Surname",
         text:"Morbi ligula velit, interdum non eros eu, semper aliquet ligula.",
         estimation: '5'
@@ -158,13 +158,8 @@ const ratingIcon={
     '4':"img\\rating1.svg",
 }
 
-let i=0;
 const reviewsElement = document.getElementById('reviews');
-reviewsElement.innerHTML=`<img id="left" src="img\\arrow.svg" alt="arrow">`
 for (review of Reviews){
-    if(i==3){
-        break;
-    }
     reviewsElement.innerHTML+=`<div class="review">
         <div class="flex_between reviewName">
             <div class="flex_between">
@@ -175,6 +170,11 @@ for (review of Reviews){
         </div>
         <p class="contentText">${review.text}</p>
     </div>`
-    i++;
 }
-reviewsElement.innerHTML+=`<img id="right" src="img\\arrow.svg" alt="arrow">`
+
+function leftScroll(){
+    reviewsElement.scrollBy({left:-Math.ceil(reviewsElement.offsetWidth*0.35), behavior: 'smooth'});
+}
+function rightScroll(){
+    reviewsElement.scrollBy({left:Math.ceil(reviewsElement.offsetWidth*0.35), behavior: 'smooth'});
+}
